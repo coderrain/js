@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 检测数据类型
+    *   typeof检测
+    *
+    * */
+
+    var str = 'a';
+    var num = 3;
+    var boolean = true;
+    var nulls = null;
+    var unde = undefined;
+    console.log(typeof str); //"string"
+    console.log(typeof num); //"number"
+    console.log(typeof boolean); //"boolean"
+    console.log(typeof nulls); //"object"
+    console.log(typeof undefined); //"undefined"
+
+
+    var arr = [];
+    var obj = {};
+    console.log(typeof []); //"object"
+    console.log(typeof {}); //"object"
+
+    console.log(typeof typeof typeof typeof []);//string
+
+    //2.  console.log([] instanceof Array);
+    //3.  console.log(({}).constructor == Object)
+
+    console.log(Object.prototype.toString.call({})); //[object Object]
+    console.log(Object.prototype.toString.call([])); //[object Array]
+
+
+</script>
+</body>
+</html>
