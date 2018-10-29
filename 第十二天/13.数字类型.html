@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 数字类型
+    *   整数小数负数，NaN
+    *   NaN:(not a number)
+    *       不是一个数字，但是他是一个数字类型
+    *       NaN 和自己都不相等，和任何东西都不相等
+    *
+    *   isNaN() 检测它是不是一个有效的数字,是不是先把内容转换成数字类型再去判断是不是NaN
+    *
+    *   Number() 方法 把其他类型转换成数字类型 先把对象转换成字符串在转换成数字
+    *
+    *
+    *   parseInt(str, 进制数) 把字符串转换成整数
+    *       遇到小数点就停止查找了直接输入点之前的
+    *       遇到不是数字的就停止查找返回之前的
+    *
+    *   parseFloat() 把字符串转换成小数
+    *       遇到不是数字的就停止查找返回之前的
+     *  */
+    console.log(NaN == NaN); // false
+    console.log(isNaN(3)); // false
+    console.log(isNaN('3px')); //true
+
+    console.log(Number("1")); //-> 1
+    console.log(Number("1px")); //-> NaN
+    console.log(Number([])); //-> []-> "" -> 0
+    console.log(Number({})); //-> {} -> [object Object] -> NaN
+    //console.log(({}).toString());
+    console.log(Number(false)); //-> 0
+    console.log(Number(true)); //-> 1
+    console.log(Number(null));// -> 0
+    console.log(Number(undefined)); //NaN
+
+    console.log(parseInt('1px')); //1
+    console.log(parseFloat('1.34324px')); //1.34324
+
+
+</script>
+</body>
+</html>
