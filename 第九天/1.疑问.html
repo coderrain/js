@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+
+    疑问：
+        1.是不是手机不能看咱们写的响应式的东西，网页被缩小了看不清了？
+        2.为什么能在谷歌浏览器里模拟手机实际的情况呢？
+        3.可以模拟很多种手机？
+
+    1：为什么能在谷歌浏览器里看的手机里一样（模仿手机查看页面）
+        因为浏览器提供了一个模拟器
+            展示框
+            菜单栏
+                他提供了很多机型，可以模拟很多机型设备
+                通过user agent来模拟不同机型的
+                设备的宽和高
+                可以缩放展示窗口
+                模拟不同的网络比如2G，3G，4G网
+                横屏竖屏
+
+
+     2：把正常的网页缩小了？
+           因为实际的document的宽度是980 所以造成了缩小
+
+           视口（viewport）：
+            视口的宽度等于设备宽度肯定不等于
+
+
+     3.: viewprot元信息来解决
+        <meta name="viewport" content="width=device-width">
+        width:decice-width
+        initial-scale: 1.0
+        maximum-scale:1.0
+        minimum-scale:1.0
+        user-scalable:no
+    4. iphone5
+            分辨率： 640*1136
+            设备(屏幕)大小：320*568
+
+
+
+
+-->
+</body>
+</html>

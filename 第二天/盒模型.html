@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height:200px;
+            padding: 10px 20px 30px 4px;
+            margin: 0 20px;
+            border:23px solid #ccc;
+            border-bottom: 3px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    盒模型是什么东西？
+
+    盒模型包括什么： margin + border + padding + contentW
+    标准盒子的：
+        盒子宽度 width: border（左右） + padding（左右） + contentW
+    IE低版本：
+        盒模宽度 width: contentW
+
+    <div id="box">
+
+    </div>
+    盒子的宽度：100 + 20 + 4 + 23 + 23
+    盒子的高度：200 + 23 + 3 + 10 + 30
+</body>
+</html>

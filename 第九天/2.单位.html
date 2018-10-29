@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        html{
+            font-size: 30px;
+        }
+
+        @media all and (max-width:414px){
+            html{
+                font-size: 55.2px;
+
+            }
+        }
+
+        @media all and (max-width: 400px){
+            html{
+                font-size: 50px;
+                background: red;
+            }
+        }
+        @media all and (max-width: 320px) {
+            html{
+                font-size: 42.67px;
+                background: yellow;
+            }
+        }
+
+        div{
+            height: 5rem;
+            font-size:1rem;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        px: 像素单位
+        em: 是不是就相当于自身的font-size的值 1em = font-size
+        rem:相对于html的font-size 5rem = 150px   1rem=30px;
+        研究html的font-size,为什么研究，因为rem根据变化的
+
+
+
+        ui给咱们设计图 640  750像素，最常用的现在都用750
+
+
+        750 设计图里面单位都用rem  假设：1rem=100px
+        375 屏幕上也用rem做单位    1rem = 50px
+
+        750    320
+        --- = ---
+        100    x
+    -->
+
+<div style="">
+我是rem单位
+</div>
+</body>
+</html>

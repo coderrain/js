@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+
+    bfc
+        块级格式化上下文
+        当你这个元素触发bfc的时候就会产生一个隔离的渲染部分; 相当于创建了一个独立的环境
+        特性：
+            计算BFC的高度时，浮动元素也参与计算。
+
+
+
+       如果一个元素触发bfc 创建了一个独立的空间；它的子元素如果有浮动的话也会计算浮动子元素的高度
+
+
+       触发bfc的条件
+         overflow 除了visible 以外的值（hidden，auto，scroll ）
+         float 除了none以外的值
+         display (table-cell，table-caption，inline-block, flex, inline-flex)
+         position值为（absolute，fixed）
+-->
+
+
+<div style="border: 1px solid #ccc; float: right;">
+    <span style="float: left;">1111</span>
+    <span style="float: left;">22222</span>
+</div>
+
+<div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+    文档流：文档流是文档中可显示对象在排列时所占用的位置
+    浮动： 使其脱离文档流
+    float:
+        块在一排显示
+        块元素靠内容撑开
+        行内元素支持宽高
+
+    清除浮动：
+        给父元素高（扩展性不好）
+        多了一个标签
+        伪类清除浮动
+        overflow:hidden;
+
+
+
+    回顾伪类
+        :link
+        :hover
+
+        :after
+        :before
+
+-->
+
+<!--<div style="border: 1px solid #ccc;">
+    <div style="float: left; background: red;">1111</div>
+    <div style="float: left; background: red;">22222</div>
+</div>-->
+
+<style>
+    .clear{
+        clear: both;  /*清除浮动left,right,both*/
+    }
+
+</style>
+
+<!--<div style="border: 1px solid #ccc; height: 100px;">
+    <span style="float: left;width: 100px;">1111</span>
+    <span style="float: left;">22222</span>
+</div>-->
+
+
+<!--
+<div style="border: 1px solid #ccc;">
+    <span style="float: left;width: 100px;">1111</span>
+    <span style="float: left;">22222</span>
+    <div class="clear"></div>
+</div>-->
+
+<!--<style>
+    .clearfix{
+        *zoom:1;
+    }
+    .clearfix:after{
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+</style>
+
+<div class="clearfix" style="border: 1px solid #ccc;">
+    <span style="float: left;width: 100px;">1111</span>
+    <span style="float: left;">22222</span>
+</div>-->
+
+
+
+<div style="border: 1px solid #ccc; overflow: hidden;">
+    <span style="float: left;">1111</span>
+    <span style="float: left;">22222</span>
+</div>
+</body>
+</html>

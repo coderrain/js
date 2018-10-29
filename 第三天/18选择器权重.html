@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <!--  元素 class id 行内 !important
+
+
+        权重： 权利越大越管用
+
+        元素   1
+        class  10
+        id     100
+        行内的  1000
+-->
+
+        <style>
+            div p{
+                background: yellow;
+            }  /*-> 2*/
+            .pClass{
+                background: red;
+            }/*} -> 10*/
+            #pBox{
+                background: green;
+            } /*-> 100*/
+            div .pClass{
+                background: pink;
+            } /* 11*/
+
+        </style>
+        <div>
+            <p class="pClass" id="pBox">p标签</p>
+        </div>
+</body>
+</html>

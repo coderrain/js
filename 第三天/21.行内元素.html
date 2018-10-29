@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: 0;
+        }
+        span{
+            width:100px;
+            height: 100px;
+            background: red;
+            /*margin-right: 100px;*/
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    行内元素：
+        1. 不支持宽高
+        2. 宽度是由内容撑起来的
+        3. 可以在一行排列
+        4. 不支持margin上下
+        5.换行会被浏览器解析
+            5.1解决空格问题：
+                5.1.1 让html结构在一行
+                5.1.2 给父级设置字体为0 然后自己设置回去原来的字体
+
+-->
+<span>121211</span>
+<span>121211</span>
+</body>
+</html>

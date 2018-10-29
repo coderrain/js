@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+
+      回顾伪类
+        :link
+        :hover
+
+        :after
+        :before
+        伪类不兼容ie6,7
+-->
+<style>
+    div:before{
+        content: '1';
+        background: red;
+        float: left;
+        width: 14px;
+        font-size: 12px;
+        position: relative;
+        top:5px;
+        height:14px;
+        text-align: center;
+    }
+    div{
+        float: left;
+    }
+    div:after{
+        content: '2121';
+        background: red;
+        float: right;
+    }
+</style>
+<div>
+    我是div
+</div>
+
+</body>
+</html>

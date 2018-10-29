@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    结构选择器
+        子集选择器 > 来展现的
+-->
+<style>
+  /*  div{
+        background:red;
+    }
+    .parent>div {
+        background: yellow;
+    }*/
+
+</style>
+
+    <div class="parent">
+        <div>
+            child
+            <div>greandson</div>
+        </div>
+    </div>
+
+
+<!--
+    相邻元素选择器
+         + 形式来展现的
+         本元素后面的相邻的
+-->
+<style>
+    /*div + p {*/
+        /*background: red;*/
+    /*}*/
+</style>
+<p>1</p>
+<div>2</div>
+<p>3</p>
+<p>4</p>
+
+
+<!--
+
+    兄弟元素选择器
+        ~ 形式展现
+        同级所有符合的
+-->
+<hr>
+
+<style>
+    div ~ p {
+        background: yellow;
+    }
+</style>
+<p>1</p>
+<p>222</p>
+<div>43432423</div>
+<div>2</div>
+<p>3</p>
+<p>4</p>
+
+
+
+</body>
+</html>

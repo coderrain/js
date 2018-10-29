@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            行内引入不可取
+            给所有的p标签也不可取
+            通过包含选择器可取 问题又来了？ 嵌套多层
+            class类或者id选择器解决
+        */
+        div div p{
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <p id="">div里面的p</p>
+        </div>
+        <p>div里面的p</p>
+    </div>
+    <p>外面的p</p>
+</body>
+</html>

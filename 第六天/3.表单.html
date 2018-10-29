@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+           表单
+            用于搜集不同类型的用户输入
+            表单用form标签
+                action 提交地址
+                method 提交方式 get,post
+           input标签用于搜集用户信息
+                   value属性就是文本框的值
+                   type属性就是文本框的类型
+                        text文本框正常的文字输出
+                        password 型号的形式展现
+                        radio 单选框
+                        checkbox 多选框
+                        submit 提交按钮
+                        button 按普通钮
+                        file  上传文件按钮
+                        hidden 隐藏按钮
+                        number 只能输入数字
+
+                 name属性 通过name属性提交数据到后台的
+    -->
+
+    <form action="/login.php" method="post">
+        姓名：<input type="text" value="12" name="username">
+        <br>
+        密码：<input type="password" name="pwd">
+        <br>
+        sex: <input type="radio" name="sex" value="1">男 <input type="radio" name="sex" value="2">女
+        <br>
+        爱好：<input type="checkbox" name="hobbiy" value="跑步">跑步 <input name="hobbiy" type="checkbox" value="听歌">听歌
+        <br>
+        <input type="submit" value="login"><br>
+        <input type="reset" value="重置按钮"><br>
+        <input type="button" value="提交"><br>
+        <input type="file"><br>
+        <input type="hidden"><br>
+        <input type="number"><br>
+        <!--<input type="color">-->
+        <!--
+            <label> 标签的 for 属性应当与相关元素的 id 属性相同
+        -->
+        <label for="username">男</label><input type="radio" id="username"><br>
+        <!--
+
+            select 下拉框
+
+        -->
+        <select name="" id="">
+            <option value="">1</option>
+            <option value="" selected>2</option>
+        </select>
+        <br>
+
+        <!--
+               textarea 多行文本框
+        -->
+        <textarea name="" cols="20" rows="1"></textarea>
+
+        <button>点击按钮</button>
+    </form>
+</body>
+</html>

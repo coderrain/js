@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            定位：
+                position属性来设置定位的
+
+            相对定位:生成相对定位的元素，相对于其正常位置进行定位。
+                position:relative;
+                特性：
+                   1： 只给relative不设置其他的东西（偏移量）就没有变化(如果没有定位偏移量，对元素本身没有任何影响)
+                   2： 偏移量 -> top right bottom left
+                        top: 相对于原来的位置向下走了20px
+                   3： 不影响自身的属性
+                   4:  不使元素脱离文档流（元素移动之后原始位置会被保留）
+                   5： 提升层级
+                   6: z-index必须配合position使用
+
+
+             修改层级属性
+                z-index
+
+        */
+        body{
+            margin: 0;
+        }
+        .a{
+            width: 100px;
+            height:100px;
+            background: red;
+            position: relative;
+            top:20px;
+            right:20px;
+            z-index: 2;
+        }
+        .b{
+            width: 100px;
+            height:100px;
+            background: yellow;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+<div class="a"></div>
+<div class="b"></div>
+</body>
+</html>

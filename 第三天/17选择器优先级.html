@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background: red;
+            width: 100px;
+            height:100px;
+        }
+        .box{
+            background: yellow;
+        }
+        div{
+            background: green!important;
+        }
+        #box{
+            background: pink;
+        }
+
+        /* class选择器优先级高于元素选择器 */
+        /* id选择器高于类选择器 */
+        /* 元素 < class < id < 行内引入 < !important */
+
+    </style>
+</head>
+<body>
+<!-- 行内引入高于一切选择器 -->
+<div class="box" id="box" style="background: coral;">
+
+</div>
+</body>
+</html>

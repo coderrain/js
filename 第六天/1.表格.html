@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        表格(有行有列)
+
+        表格用table标签
+            行用tr
+            标题用th
+            列用td
+        border是table的一个属性
+        区分border属性和css里面的border
+    -->
+    <style>
+        table{
+            /*border: 1px solid #ccc;*/
+            border-collapse: collapse; /*设置成单边框*/
+        }
+        th{
+            font-weight: normal;
+        }
+        th,td{
+            padding: 0;
+        }
+        /*合并单元格 合并列：colspan 合并行：rowspan*/
+    </style>
+    <table border="1px">
+            <tr>
+                <th colspan="2">姓名/年纪</th>
+                <th>性别</th>
+                <th>身高</th>
+            </tr>
+            <tr>
+                <td colspan="2">张三/12</td>
+                <td>男</td>
+                <td rowspan="2">170/180</td>
+            </tr>
+            <tr>
+                <td colspan="2">李四/12</td>
+                <td>女</td>
+            </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <!--
+        注意接下来将的选择器ie都不支持
+    -->
+
+    <!--
+         其父元素的第二个子元素的class为div1
+    -->
+   <!-- <style>
+        .div1:nth-child(2) {
+            background: red;
+        }
+    </style>
+
+    <div>
+        <div class="div1">div1</div>
+        <p class="div1">div1</p>
+        <div>div1</div>
+    </div>
+-->
+    <!--
+       奇偶行
+       其父元素下面的奇偶数行为p标签的 odd奇数行 even偶数行
+
+    -->
+  <!--  <style>
+        p:nth-child(even) {
+            background: red;
+        }
+    </style>
+    <div>
+        <p>1</p>
+        <div>2</div>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>-->
+
+<!--
+    通过公式来完成
+        括号里面写一个2n+1 代表啥呢
+                   0
+            2*0+1  1
+            2*1+1  3
+            2*2+1  5
+-->
+
+<!--
+    <style>
+        p:nth-child(2n+1) {
+            background: red;
+        }
+    </style>
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+-->
+
+
+<!--
+    倒序找 就是从后面开始找
+
+-->
+    <style>
+        p:nth-last-child(1) {
+            background: red;
+        }
+    </style>
+
+<div>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+</div>
+
+
+</body>
+</html>

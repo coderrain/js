@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    /*
+        justify-content
+            value<space-around>
+                值为这个的时候所有子元素之间都有间距（是不是总间距减去子元素占有的然后再分配）
+                两边也要边距
+            value<space-between>
+                值为这个的时候所有子元素之间都有间距（是不是总间距减去子元素占有的然后再分配）
+            不管方向是横行还是纵向都会分配的，横向分配的是宽纵向是高
+    */
+    .parent{
+        width: 400px;
+        height:400px;
+        border:1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .parent div{
+        background: red;
+        height: 40px;
+        width: 100px;
+    }
+</style>
+<div class="parent">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+</body>
+</html>

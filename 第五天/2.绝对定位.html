@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            绝对定位：
+                其属性值：absolute
+
+                特性：
+                    1.块元素靠内容撑开
+                    2.行内支持宽高
+                    3.元素脱离了文档流
+                    4.相对于document（整个html文档）定位
+                    5.如果给父级position（relative,absolute,fixed）的话就相对于父级来说的
+
+                所有的定位都最好是同级和同级
+
+        */
+        body{
+            margin: 0;
+        }
+        .a{
+            width:200px;
+            /*height:100px;*/
+            background: red;
+            position: absolute;
+            top:10px;
+
+        }
+        .b{
+            width:100px;
+            height:100px;
+            background: yellow;
+        }
+        .parent{
+            width: 400px;
+            height: 400px;
+            border: 10px solid #ccc;
+            position: fixed; /*父级可以是relative,absolute,fixed*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        1234567890
+        <div class="a">绝对定位</div>
+    </div>
+    <div class="b"></div>
+
+
+<!--
+    建议兄弟之间比较层级 a和b比较
+    <div class="a">
+        <div class="c"></div>
+    </div>
+    <div class="b"></div>
+  -->
+</body>
+</html>

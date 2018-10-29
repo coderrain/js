@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        href 跳转地址
+        target  _self 本页面跳转 _blank 新页面打开
+        href 里面#开始  #app跳转到对应的元素id为app的位置
+        相关伪类
+            :link 未访问的链接
+            :visited 访问过后的链接
+            :hover 鼠标悬停的链接
+            :active 激活的链接
+     -->
+    <style>
+        <!--fsdfsd -->
+        a:link{color: yellow;  }
+        a:visited{color: green;}
+        a:hover{color: red;}
+        a:active{background: yellow;}
+        div{background: red;}
+        div:hover{background: yellow;}
+    </style>
+    <a href="http://baidu.com?fdsfdfdfd" target="_blank">衣服楼层</a>
+    <div id="app">app is div</div>
+
+</body>
+</html>

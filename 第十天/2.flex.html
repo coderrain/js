@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    弹性盒模型 flex
+        display:flex;
+        display:-webkit-flex;
+            是不是块元素也能排到一行
+            给父级了
+         flex:1
+            占几分
+            给父级的元素
+         flex-direction 是不是给父级
+            排列方向是垂直的<column>
+            默认是横向<row>
+            横向反排<row-reverse>
+            纵向（垂直）反排<column-reverse>
+        flex-wrap 是不是给父级
+            强制不换行<nowrap>
+            默认是换行<wrap>
+         flex-flow 是不是给父级
+            把direction和wrap复合样式了
+         align-items
+            这是垂直居中<center> 是不是给父级
+        justify-content
+            这是水平居中<center> 给父级
+-->
+<style>
+    .parent{
+        display: flex;
+        display:-webkit-flex;
+        margin:0;
+        /*flex-direction: column-reverse;*/
+        /*flex-wrap: nowrap;*/
+        /*flex-flow: row wrap;*/
+     /*   align-items: center;
+        justify-content: center;*/
+        height: 400px;
+        border: 1px solid #ccc;
+    }
+    .parent div{
+        background: red;
+        width: 100px;
+        /*width: 50%;*/
+        /*flex: 1;
+        -webkit-flex: 1;*/
+    }
+    .parent .div3{
+        /*flex: 1.4;*/
+        /*-webkit-flex: 1.4;*/
+        /*width: 1000px; !*宽是不管用的*!*/
+    }
+
+</style>
+<!--<div>fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1fsdfds1</div>
+<div style="background: yellow">2</div>-->
+<div class="parent">
+    <div class="div3">3</div>
+</div>
+</body>
+</html>
