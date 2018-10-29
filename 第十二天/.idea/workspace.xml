@@ -15,16 +15,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="6.常量和变量.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/6.常量和变量.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="7.定义变量名字的规范.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/7.定义变量名字的规范.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,11 +75,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="13.数字类型.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="13.数字类型.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/13.数字类型.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="59">
+              <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14.对象类型.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14.对象类型.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="15.函数类型.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/15.函数类型.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16.js数据类型区别.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/16.js数据类型区别.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="749">
+              <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -122,6 +142,9 @@
         <option value="$PROJECT_DIR$/11.布尔类型.html" />
         <option value="$PROJECT_DIR$/12.null和undefined.html" />
         <option value="$PROJECT_DIR$/13.数字类型.html" />
+        <option value="$PROJECT_DIR$/13.对象类型.html" />
+        <option value="$PROJECT_DIR$/15.函数类型.html" />
+        <option value="$PROJECT_DIR$/16.js数据类型区别.html" />
       </list>
     </option>
   </component>
@@ -265,15 +288,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540778058146</updated>
-      <workItem from="1540778059442" duration="11711000" />
+      <workItem from="1540778059442" duration="16217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11711000" />
+    <option name="totallyTimeSpent" value="16217000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13477801" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -423,8 +446,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/13.数字类型.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="59">
+          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14.对象类型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/15.函数类型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16.js数据类型区别.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding />
         </state>
       </provider>

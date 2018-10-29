@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 对象类型
+    *   {} -> 表示一个对象 字面量方式
+    *       是不是可以多个键值对key:value形式，每个必须用一个逗号隔开，最后一个不需要
+    *   获取对象的属性：
+    *       点：“的”的意思
+    *       中括号的形式获取（里面是个字符串）
+    *       如果key是数字的话不能用点
+    *
+    *       如果对象里没有这个属性是不是就返回undefined
+    *
+    *   修改对象属性：
+    *       相当于重新赋值
+    *   增加属性:
+    *       直接增加赋值就可以
+    *
+    *   删除对象属性：
+    *
+    *       假删除 obj.key =null;
+    *       真删除 delete obj.key
+    *
+    *
+    *
+    *
+    *   people[name] 和 people['name']区别
+    *   people[name] = people['san']
+    *
+    *
+    *
+    * */
+    var people = {
+        name: '小王',
+        sex: '男',
+        height: 175,
+        0: 'wwww'
+    };
+
+    console.log(people.name);
+    console.log(people['name']);
+    //console.log(people.0);
+    console.log(people[0]);
+    people.name = 'rain';
+    people.age = 30;
+
+    //people.age = null;
+    delete people.age;
+    console.log(people.age);
+</script>
+</body>
+</html>
