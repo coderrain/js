@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 布尔类型
+    *   只有两个值 true/false
+    *
+        *   0 转换成布尔值是 false
+        *   ""转换成布尔值的时候是false
+        *   null -> false
+        *   undefined -> false
+        *   NaN -> false
+        *   0 “” null undefined NaN都是返回false,除此之外都是true
+    *
+    * ! 取反的意思,返回布尔值
+    *
+    * !! 相当于Boolean方法
+    *
+    * == 判断两边的值是否相等
+    * != 不等
+    *
+    *
+    * */
+    //var boolean = true;
+    //console.log(typeof boolean);
+    var num = 0;
+    console.log(Boolean(num));
+    var str = "0";
+    console.log(Boolean(str));
+    var nulls = null;
+    console.log(Boolean(nulls));
+    var unde = undefined;
+    console.log(Boolean(undefined));
+    console.log(Boolean(NaN));
+    var arr = [];
+    console.log(Boolean([]));
+
+    var num = 1;
+    console.log(!num); //false
+    console.log(![]);  // false
+
+
+    console.log(1 != 1);//false
+
+
+</script>
+</body>
+</html>
