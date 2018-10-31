@@ -5,6 +5,66 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    /*
+    * 函数：执行一个方法
+    * 语句 function fnName(){}
+    * 只定义一个函数式没有意义的，执行才有意义
+    *
+    * 为什么要有函数
+    *   简化代码
+    *
+    * 函数名加小括号  fnName()
+    *
+    * 形参和实参
+    *   形参： 定义的时候小括号里面的参数
+    *   实参： 函数执行小括号里面的参数
+    *
+    *
+    *  arguments
+    *   参数的集合
+    *       有下标
+    *       还有length
+    *    类数组：有下标和length长度的叫做类数组
+    *
+    *
+    *   如果函数没有返回值是不是返回来的就是undefiend
+    *   如果想返回数据用return
+    *
+    * */
 
+    function run() {
+        //console.log(arguments)
+        var str = '';
+        for(var i=0;i<arguments.length;i++) {
+            str += arguments[i];
+        }
+       // console.log(str);
+        return str;
+    }
+
+    console.log(run('12', 12, 33, 44, 4, 1, 1));
+
+
+    function add() {
+        var result = 0;
+        for(var i=0;i<arguments.length;i++) {
+            result += arguments[i];
+        }
+        return result;
+    }
+
+    console.log(add(1, 2, 3)); //=>6
+
+
+    function del() {
+        return arguments[1]-arguments[0]
+    }
+    console.log(del(10, 100)); //
+
+
+    spl('a','b','c','d') //
+
+</script>
 </body>
 </html>

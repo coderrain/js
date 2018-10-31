@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *  数字类型
+    *    整数小数负数NaN
+    *    isNaN检测
+    *    Number()
+    *    parseInt()
+    *    parseFloat()
+    *    +也可以转换成数字
+    *
+    *
+    *  布尔类型转换成数字
+    *   true -> 1
+    *   false -> 0
+    *   '' -> 0
+    *   '1' -> 1
+    *   '1px' -> NaN(Number) /1(parseInt)
+    *   null -> 0
+    *   undefined -> NaN
+    *
+    *   对象转换成数字类型 先转换成字符toString方法，然后在转换成数字
+    *   {} -> NaN
+    *   [] -> 0
+    *
+    *
+    *
+    *   任何东西和字符串相加就是拼接字符串，把这个任何东西都转换成字符串
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+
+    /*var num = '1px';
+    console.log(+num)//1
+    console.log(typeof +num) //number*/
+
+
+    console.log(1 + "1"); //2
+
+    console.log(1 + [10,12]); //1[object Object]  [10,12]->"10,12"
+</script>
+</body>
+</html>
