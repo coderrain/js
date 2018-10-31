@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+
+</style>
+
+<ul id="list">
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+    <li>03</li>
+</ul>
+<script>
+    /*
+    * 0%2 = 0
+    * 1%2 = 1
+    * 2%2 = 0
+    * 3%2 = 1
+    *
+    * 0%3 = 0
+    * 1%3 = 1
+    * 2%3 = 2
+    * 3%3 = 0
+    *
+    *
+    * */
+    var oList = document.getElementById('list');
+    var aLi = oList.getElementsByTagName('li');
+    //console.log(aLi);
+    for(var i=0;i<aLi.length;i++) {
+        if(i%3 == 0) {
+            aLi[i].style.background = 'red';
+        }else if(i%3 == 1) {
+            aLi[i].style.background = 'yellow';
+        }else{
+            aLi[i].style.background = 'green';
+        }
+        //switch
+    }
+</script>
+</body>
+</html>

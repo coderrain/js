@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .ddd{
+        background: red;
+    }
+    .aaa{
+        background: yellow;
+    }
+</style>
+<div id="app" class="ddd">this is app</div>
+
+<ul id="list">
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+</ul>
+<script>
+    /*
+    * 操作dom
+    *   dom：文档对象模型 提供了一些操作dom的属性和方法
+    *
+    *   获取id元素
+    *       document.getElementById('app')；
+    *       返回的是一个dom对象
+    *       document 上下文永远是document
+    *       一个页面只能有一个id属性
+    *
+    *
+    *   获取标签元素
+    *       context.getElementsByTagName('标签名')
+    *       context 上下文
+    *       返回一个元素集合 集合里面是获取的每个元素
+    *   索引（下标）
+    *   有一个属性length 长度
+    *
+    * */
+    var oList = document.getElementById('list');
+    var aLi = oList.getElementsByTagName('li');
+    console.dir(aLi);
+    for(var i=0;i<aLi.length;i++) {
+        aLi[i].style.background = 'red';
+    }
+
+    /*    var oApp = document.getElementById('app');
+    console.dir(oApp);
+    console.log(oApp.innerHTML)
+    console.log(oApp.className)
+    oApp.className = 'aaa';
+    oApp.style.background = 'blue';
+    oApp.style.backgroundColor = 'green';*/
+</script>
+</body>
+</html>
