@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <div>
+        <div class="a">1</div>
+    </div>
+    <div class="a">2</div>
+    <div></div>
+</div>
+<script>
+/*
+* dom 文档对象模型
+*   提供了一些操作dom的属性和方法
+*
+*
+* 通过元素id获取
+*   document.getElementById('id属性值');
+*       返回的dom对象
+*       id不能重复
+*
+*
+* 通过元素名字获取
+*   context.getElementsByTagName('标签名');
+*       返回的是一个集合
+*           下标
+*           长度
+*           因为有小标和长度特性所以管他叫做类数组
+*       获取的是子孙不单单是子集的
+*
+*
+*  通过class类选择器获取
+*    context.getElementsByClassName('类选择器值')
+*       返回的一个集合
+*           类数组
+*        但是不兼容ie678 不兼容后面咱们去写一个兼容的
+*
+*   获取文档
+*   document.documentElement
+*
+*   获取body
+*   document.body
+*
+*   querySelector() ie678不兼容 常用移动端
+*    获取符合css选择器d的
+*    只能获取到一个并且是第一个
+*   querySelectorAll()
+*       获取所有的
+*
+* */
+
+var oApp = document.getElementById('app');
+var aDiv = oApp.getElementsByTagName('div');
+console.log(aDiv.length);
+var aClassDiv = oApp.getElementsByClassName('a');
+console.log(aClassDiv);
+//console.dir(aClassDiv[0]);
+console.dir(oApp)
+
+
+/*    function getClassName(context, className) {
+        var tags = context.getElementsByTagName('*');
+        var arr = [];
+        for(var i=0;i<tags.length;i++) {
+            if(tags[i].className == className) {
+                arr.push(tags[i]);
+            }
+        }
+        return arr;
+    }
+
+console.log(getClassName(oApp, 'a'));*/
+
+console.dir(document.documentElement.clientHeight);
+console.dir(document.body.clientHeight);
+var winH = document.documentElement.clientHeight || document.body.clientHeight; //可视区的高度
+
+console.log(document.querySelectorAll('.a'));
+</script>
+</body>
+</html>
