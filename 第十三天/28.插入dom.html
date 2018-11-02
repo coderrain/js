@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-
+<div id="app">
+    <div id="child">我是子元素</div>
+</div>
+<script>
+    /*
+    * 插入dom元素
+    *
+    * insertBefore
+    *
+    *
+    * insertAfter
+    *
+    *
+    * */
+    var oApp = document.getElementById('app');
+    var oChild = document.getElementById('child');
+    var oDiv = document.createElement('div');
+    var oText = document.createTextNode('this is p');
+    oApp.insertBefore(oText, oChild);
+   /// oApp.insertBefore(oText,oChild.)
+</script>
 </body>
 </html>

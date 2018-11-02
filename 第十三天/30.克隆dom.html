@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<div id="app">
+    <div id="child">123</div>
+</div>
+<script>
+    /*
+    * cloneNode克隆
+    *   如果不写参数的话只会克隆元素自己
+    *   默认参数是false
+    *   如果参数是true是不是里面的内容复制过来了
+    *
+    *
+    *
+    *
+    * */
+    var oChild = document.getElementById('child');
+    var oApp = document.getElementById('app');
+    var oCloneNode = oChild.cloneNode(true);
+    oApp.appendChild(oCloneNode)
+
+
+</script>
 
 </body>
 </html>

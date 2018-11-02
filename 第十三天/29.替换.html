@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<div id="app">
+    <div id="child">123</div>
+</div>
+<div id="abc">345</div>
 
+<script>
+    /*
+    * replaceChild
+    *
+    *   替换的内容不是复制过去替换的，是剪切过去替换的
+    *
+    *
+    * */
+    //获取元素
+    var oApp = document.getElementById('app');
+    var oChild = document.getElementById('child');
+    var oAbc = document.getElementById('abc');
+    //创建元素
+    var oI = document.createElement('i');
+    // 是不是把oApp里面的child替换成oI
+    oApp.replaceChild(oAbc, oChild)
+</script>
 </body>
 </html>
