@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 字符串：
+    *   组成 是有双引号或者单引号括起来的
+    *   换行 \或者+
+    *   字面量的方式书写，
+    *   有索引
+    *   也有长度length
+    *   我们不去通过索引（下标）获取，不兼容
+    *
+    *   charAt(index)
+    *       通过下标获取字符串所对应的字符
+    *       如果没有获取不到就返回空字符串
+    *
+    *   charCodeAt(index)
+    *       拖过下标获取字符串对应字符的ascii码值
+    *       如果没有获取不到就返回NaN
+    *
+    *   String.fromCharCode(97)// -> a
+    *       把ascii码值转换成相应的字符
+    *
+    *
+    *  toUpperCase/toLowerCase
+    *      转换大小写
+    *
+    *
+    *  substr(开始的索引,截取的个数)
+    *   如果个数不写就直接截取到最后
+    *
+    *  substring(开始的索引, 结束前的索引)
+    *   如果截取不到返回空字符串
+    *   原字符串不变
+    *
+    *   slice(开始的索引，技术的索引)
+    *   索引可以为负数
+    *   如果个数不写就直接截取到最后
+    *
+    *   indexOf
+    *       获取对应字符的下标
+    *       如果没有对应的就返回-1
+    *   lastIndexOf
+    *       从后面开始找
+    *   split
+    *       把字符串准换成数组
+    *       参数是分隔符，而且也可以用正则
+    *
+    *
+    *   replace（old,new）
+    *       替换字符串
+    *
+    *
+    *
+    *
+    * 作业：
+    *   getParams 获取地址栏里面的参数
+    *   随机验证码
+    *
+    * */
+    var str = 'abc';
+    var str2 = new String('abc');
+    console.dir(str2)
+
+   // console.log(str[4]);
+  /*  console.log(typeof str.charAt(9));
+    console.log(str.charAt(0));
+    console.log(str.charCodeAt(0)); // ascii值  a
+
+    console.log(String.fromCharCode(97));
+
+
+    console.log(str.toUpperCase());
+    console.log(str.toUpperCase().toLowerCase());*/
+    /*var str = 'abc';
+    console.log(str.substr(1));
+    console.log(str.substring(1,-1)); //不能为负数
+    console.log(str.slice(1,-1));*/
+
+    var str = 'abca';
+    console.log(str.indexOf('a')); //0
+    console.log(str.indexOf('d')); //-1
+    console.log(str.lastIndexOf('a')); //3
+
+    console.log(str.split('')); //['a','b','c','d']
+    console.log(str.split(' ')); //['abcd']
+
+
+    console.log(str.replace('b', '*'));
+
+</script>
+</body>
+</html>

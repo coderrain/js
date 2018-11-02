@@ -6,5 +6,21 @@
 </head>
 <body>
 
+<script>
+    /*
+    * 对象和对象比较
+    *
+    * 对象和对象对比的是地址
+    *
+    *
+    * */
+    var obj = {};
+    var obj1 = {};
+    console.log(obj == obj1); //false
+    var obj = {};
+    var obj1 = obj;
+    console.log(obj == obj1); //true
+
+</script>
 </body>
 </html>

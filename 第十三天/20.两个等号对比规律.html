@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    /*
+    *  == : 判断两端的值是否相等
+    *  根据刚才的规则就能对比所有类型
+    *
+    *  NaN -> 和谁都不相等
+    *  例外：
+    *   null == undefined
+    *
+    *   null == 0  ->对比性都没有 -false
+    *
+    * */
+    console.log(null == undefined);//ture
+    console.log(null === undefined);//false
+    console.log(null === null);//true
+    console.log(undefined === undefined);//true
 
+    /*
+    *
+    * 在对象对比的时候是不是有一个规律，先把==两边的都转换成数字做对比，但是null和undefiend除外
+    *
+    *
+    *
+    * */
+</script>
 </body>
 </html>

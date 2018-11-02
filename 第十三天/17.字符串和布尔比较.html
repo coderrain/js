@@ -5,6 +5,32 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    /*
+    * 字符串和布尔比较
+    *
+    *   规则：都转换成数字
+    *
+    * 字符串和数字比较
+    *   规则： 都转换成数字
+    *
+    * 布尔和数字比较
+    *   规则： 都转换成数字
+    *
+    *
+    * */
+    var str = '';
+    var boolean = false;
+    console.log(str == boolean);//true  ''->0  false->0 0==0 -> true
 
+    var str = '';
+    var num = 1;
+    console.log(str == num); // 0 == 1  -> false
+
+
+    var boolean = false;
+    var num = 0;
+    console.log(boolean == num); //false->0 0==0 ->true
+</script>
 </body>
 </html>

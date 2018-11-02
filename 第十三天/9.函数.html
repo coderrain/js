@@ -30,6 +30,13 @@
     *
     *   如果函数没有返回值是不是返回来的就是undefiend
     *   如果想返回数据用return
+    *   return后面的结果就是函数执行后返回来的
+    *   return之后的语句都不会执行
+    *
+    *
+    *   传的参数只能是字符串吗？
+    *       可以是任何类型
+    *
     *
     * */
 
@@ -63,7 +70,28 @@
     console.log(del(10, 100)); //
 
 
-    spl('a','b','c','d') //
+    //spl('a','b','c','d') //
+
+
+
+    function fn(arg) {
+        console.log(arg)
+        return arg;
+        alert(1)
+    }
+
+    var fnRe = fn({name: 1});//
+
+    console.log(fnRe); //arg
+
+
+    function a() {
+        return 1;
+    }
+    console.log(a()); //1
+
+
+
 
 </script>
 </body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *
+    * 作业：
+    *   getParams 获取地址栏里面的参数
+    *       https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=0
+    *       ie=utf-8    &   f=3   &    rsv_bp=0
+    *
+    *   随机验证码
+    *       a-zA-Z1-9
+    *       通过随机数随机出四个数
+    *       for循环4次
+    *       var str = '1234567890asdghjklqwertyuiopxcvbnmQWTYUIOPASDHJKLZXCVBNM'
+    *       拼接每次拿到的值
+    * */
+
+    function getParams(param) {
+        var url = 'https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=0';
+        var  key = url.split('?')[1]; //ie=utf-8&f=3&rsv_bp=0
+        var keyArr = key.split('&');
+        for(var i=0;i<keyArr.length;i++) {
+            var newArr = keyArr[i].split('=');
+            if(param == newArr[0]) {
+                return newArr[1];
+            }
+//            console.log(keyArr[i].split('='));
+        }
+    }
+
+    console.log(getParams('f'));
+    
+    
+    function randomNum() {
+        var str = '1234567890asdghjklqwertyuiopxcvbnmQWTYUIOPASDHJKLZXCVBNM';
+        var newStr = '';
+        for(var i=0;i<4;i++) {
+            //去[0,str.length)
+            //然后把求出的值当做下标
+            //num通过随机数和区间概念打乱
+            newStr += str[num]
+        }
+        return newStr
+    }
+    console.log(randomNum());
+</script>
+</body>
+</html>
