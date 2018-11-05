@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p></p>
+
+<div id="app">
+</div>
+<script>
+    /*
+    *  节点方法：
+    *
+    *   previousSibling: 获取哥哥节点
+    *
+    *   previousElementSibling: 获取哥哥元素节点
+    *
+    *
+    *   好用的东西ie678都不鸟
+    *
+    *   nextSibling 弟弟节点
+    *
+    *  nextElementSibling 弟弟元素节点
+
+    * */
+
+    var oApp = document.getElementById('app');
+    //App.nextElementSibling
+    //console.dir(oApp.previousSibling);
+    //console.log(oApp.previousElementSibling);
+
+    function prev(oApp) {
+        while(oApp.previousSibling.nodeType != 1) {
+            oApp = oApp.previousSibling
+        }
+        return oApp.previousSibling;
+    }
+    console.log(prev(oApp));
+
+</script>
+</body>
+</html>

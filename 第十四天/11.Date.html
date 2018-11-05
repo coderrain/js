@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *  Date 时间对象
+    *
+    *  var date = new Date();
+    *
+    *
+    *
+    *
+    * */
+
+    var date = new Date();
+    console.dir(date);
+    console.dir(date.getFullYear()); //年
+    console.dir(date.getMonth() + 1); //0~11 月份需要加1
+    console.log(date.getDate()); //日
+    console.log(date.getHours()); //小时
+    console.log(date.getMinutes());//分
+    console.log(date.getSeconds());//秒
+    //console.log(date.getMilliseconds()); 毫秒
+    console.log(date.getDay()); // 0~6 0代表的周日
+    console.log(date.getTime() + '***************'); //出现的数字是毫秒， 1970-1-1:0:0:0
+
+    var date2 = new Date('2018/11/04 12:00:00');
+    console.log(date2.getDate() +"&&&&&&");
+
+
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var dates = date.getDate();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    document.write(year + "年" + setNum(month) +"月" +setNum(dates) + "日 " + setNum(hours) + ':' + setNum(minutes) + ":" + setNum(seconds));
+
+
+
+    function setNum(num) {
+        /*if(num < 10) {
+            return "0" + num;
+        }else {
+            return num;
+        }*/
+        return num < 10? "0" + num: num;
+
+    }
+ //   console.log(setNum(1));
+
+
+</script>
+</body>
+</html>

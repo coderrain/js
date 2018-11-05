@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"><h1>123</h1></div>
+<script>
+    var oApp = document.getElementById('app');
+    console.dir(oApp.id);
+    //console.log(oApp.innerHTML)
+    //console.log(oApp.innerText)
+   /* oApp.ininin = 3;
+    console.log(oApp);
+    console.dir(oApp);*/
+   //oApp.index = 0;
+   //oApp.setAttribute('index', 0)
+    oApp.setAttribute('ininin', 3);
+    console.log(oApp.ininin); // 只要用setAttribute设置的属性不能用点直接获取
+    console.log(oApp.getAttribute('ininin'));
+    oApp.removeAttribute('ininin');
+    /*
+    * console.log()  <div id="app"></div>
+    *
+    * console.dir()
+    *   {
+    *       id: app,
+    *       innerHTML: '',
+    *       innerText: '',
+    *       nodeType: 1,
+    *       nodeName: 'DIV',
+    *       nodeValue: null
+    *   }
+    *
+    *   设置自定义属性 设置 获取 删除 修改
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+
+
+</script>
+</body>
+</html>

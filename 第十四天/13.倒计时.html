@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *  要知道倒计时多少长时间
+    *
+    *  设置一个时间 16:00:00
+    *
+    *  一秒一秒的变化啊
+    *
+    *  知道最后00:00:00 就可以开枪了
+    *
+    *
+    *
+    *
+    *  获取到16点的时间节点
+    *
+    *  时间节点减去现在的时间节点
+    *
+    * */
+
+
+    var targetTime = new Date('2018/11/05 15:37:20');
+
+    function setTime() {
+        var newTime = new Date();
+        var delTime = targetTime - newTime; //获取到的是毫秒
+        if(delTime <= 0) {
+            clearInterval(firstInter);
+            document.body.innerHTML = "00:00:00";
+            return;
+        }
+        var hour = delTime/(1000*60*60);
+        delTime -= Math.floor(hour)*1000*60*60;
+        var minuts = delTime/1000/60;
+        delTime -=  Math.floor(minuts)*1000*60;
+        var seconds = Math.floor(delTime/1000);
+
+        //var hourDel = delTime - hour*1000*60*60;
+        document.body.innerHTML = (Math.floor(hour)+":"+Math.floor(minuts)+":"+ seconds);
+
+    }
+
+    setTime();
+
+    var firstInter = setInterval(setTime, 1000)
+
+
+
+
+    //console.log(xx);
+
+
+</script>
+</body>
+</html>

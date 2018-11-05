@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"><!-- 注释 -->
+    <p></p></div>
+<script>
+    /*
+    *  节点方法：
+    *
+    *
+    *   childNodes
+    *       获取所有子节点
+    *       返回一个节点集合 类数组
+    *       如果没有就返回空的节点集合
+    *
+    *   文本节点包括换行和空格
+    *
+    *   children
+    *       获取元素节点
+    *       返回一个元素集合 类数组
+    *       如果没有呢返回空集合
+    *
+    *       js中好用的ie678都不鸟你
+    *
+    *
+    *
+
+    * */
+
+    var oApp = document.getElementById('app');
+    //console.log(oApp.childNodes);
+    console.log(oApp.children);
+    // [#comment,#text,P]
+
+
+    function children(parentEle) {
+        var childNode = parentEle.childNodes;
+        var arr = [];
+        for(var i=0;i<childNode.length;i++) {
+            if(childNode[i].nodeType == 1) {
+                arr.push(childNode[i])
+            }
+        }
+        return arr;
+    }
+
+    console.log(children(oApp));
+
+
+</script>
+</body>
+</html>

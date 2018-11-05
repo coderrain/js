@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+    /*
+    * 获取第一个节点
+    *firstChild
+    *
+    * firstElementChild
+    *
+    * 获取最后子节点
+    * lastChild
+    * 
+    *lastElementChild
+    *
+    *
+    * */
+    var oApp = document.getElementById('app');
+    //console.log(oApp.firstChild);
+    //console.log(oApp.firstElementChild);
+    
+    function first(parent) {
+        var firstNode = parent.firstChild;
+        /*if(!firstNode) {
+            return firstNode;
+        }*/
+        while (firstNode && firstNode.nodeType != 1) {
+            firstNode = firstNode.nextSibling
+        }
+        return firstNode;
+    }
+
+    console.log(first(oApp));
+
+
+</script>
+
+
+</body>
+</html>

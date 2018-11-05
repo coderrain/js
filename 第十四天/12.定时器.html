@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 定时器： 设置定时任务的
+    *
+    * setTimeout(function(){}, 1000)
+    *
+    * 第一个参数： 定时做的事
+    * 第二个参数： 啥时候去做 毫秒 1s = 1000ms
+    * 只能执行一次
+    *
+    *
+    * setInterval(function(){}, 1000)
+    * 第一个参数： 定时做的事
+    * 第二个参数： 啥时候去做 毫秒 1s = 1000ms
+    * 能执行多次
+    * */
+/*    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var dates = date.getDate();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    console.log(year + "年" + setNum(month) +"月" +setNum(dates) + "日 " + setNum(hours) + ':' + setNum(minutes) + ":" + setNum(seconds));*/
+
+
+
+    function setNum(num) {
+        /*if(num < 10) {
+         return "0" + num;
+         }else {
+         return num;
+         }*/
+        return num < 10? "0" + num: num;
+
+    }
+
+
+    function setTime() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        document.body.innerText = (year + "年" + setNum(month) +"月" +setNum(dates) + "日 " + setNum(hours) + ':' + setNum(minutes) + ":" + setNum(seconds));
+    }
+    setTime();
+
+   /* setTimeout(function () {
+        setTime();
+    }, 1000)*/
+//    setTimeout(setTime, 1000)
+
+    setInterval(setTime, 1000);
+</script>
+</body>
+</html>
