@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 数组去重
+    * var arr = [1,2,3,1]
+    *
+    * 新建一个对象
+    * var obj = {};
+    *
+    * obj[arr[0]] = true
+    *
+    * var obj = {'1': true,'2': true,'3': true}
+    *
+    *
+    *
+    *
+    * */
+
+    var arr = [1,2,3,1];
+    //数组塌陷
+    var obj = {};
+    for(var i=0;i<arr.length;i++){
+        if(obj[arr[i]]) {
+            arr.splice(i,1)
+            i--;
+        }else{
+            obj[arr[i]] = true;
+        }
+       /// obj[arr[i]]?arr.splice(i--,1):obj[arr[i]] = true;
+    }
+    console.log(arr);
+
+    /*   var newArr = [];
+    for(var key in obj){
+        newArr.push(key)
+    }
+
+    console.log(newArr);*/
+
+
+
+
+</script>
+</body>
+</html>
