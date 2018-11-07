@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *
+    * 数组：
+    *   typeof [] -> 'object'
+    *
+    *   var arr = [1,2];
+    *
+    *   {
+    *     '0': 1, 属性名  属性值
+    *     '1': 2,
+    *     length: 2,
+    *     test: 5
+    *   }
+    *
+    *
+    *   for(var key in arr) {
+    *
+    *   }
+    *
+    *
+    *
+    *   for in
+    *   是不是用来循环对象的，
+    *   可以循环数组，但是咱们给数组添加一个属性也会遍历出来
+    *
+    * */
+    /*var arr = [1,2];
+    arr.test = 5;
+    for(var i=0;i<arr.length;i++) {
+        alert(arr[i]);
+    }*/
+
+    /*for(var key in arr) {
+        alert(arr[key])
+    }*/
+
+
+    /*
+    * 数组：
+    *   是不是有下标和长度属性，下标以零开始，他的原型是基于Array构造函数的
+    *
+    * 类数组：
+    *   因为他也有下标和长度属性
+    *
+    *
+    *  push
+    *    向数组里面追加一个子集-> 往数组后面添加一个子集
+    *   参数可以多个，一般正常都会追加一个的
+    *   返回的是追加后的数组长度
+    *   原数组会改变
+    *
+    *  pop
+    *   删除数组中的最后一项
+    *   没有参数
+    *   返回的是被删除的那一项,如果数组是空数组那么返回的就是undefined
+    *   原数组会改变
+    *
+    *  unshift
+    *   向数组的最前面添加一项子集
+    *   有参数把 可以多个
+    *   返回的是改变后的数组长度
+    *   原数组会变
+    *
+    *  shift
+    *   删除数组中的第一项
+    *   没有参数
+    *   返回被删除的那一项，如果是空呢返回的样式undefined
+    *   原数组会变
+    *
+    *  length
+    *   修改length的长度也可以改变数组，删除添加一些子集
+    *
+    *  splice
+    *   对数组进行修改，删除，添加
+    *   参数（n,m,item）
+    *   n（index）是从哪开始
+    *   m（number个数） 删除多少个
+    *   item 添加的子集
+    *
+    *   返回值返回删除的集合
+    *   原数组会改变
+    *
+    *
+    *
+    * */
+
+  /*  var arr = [];
+    //alert(arr);
+    //console.log(arr.push('a')); // 1
+    //arr.push('a','b');
+    console.log(arr.pop());
+    console.log(arr); // [1]*/
+
+
+ /* var arr = [3];
+    console.log(arr.unshift('a',1)); //['a',1,3]
+    console.log(arr.shift()); //a
+    console.log(arr); //[1,3]*/
+
+  /*  var arr = [1,2,3];
+    arr.length = 5;
+    //console.log(JSON.stringify(arr));
+    console.log(arr); //[1,2,3,null,null]*/
+
+    var arr = [1,2,3];
+
+    //console.log(arr.splice(2, 1)); //从索引为2的开始删除一项，包括自己  [3]
+    //console.log(arr.splice(1));//[2,3]
+    //console.log(arr); // [1]
+
+   //删除
+    /* arr.splice(arr.length-1);
+    arr.splice(0,1);
+    console.log(arr);*/
+
+    //添加
+    /*console.log(arr.splice(arr.length, 0, 'a'));
+    console.log(arr);*/
+
+    //修改
+    console.log(arr.splice(1, 1, '4'));
+    console.log(arr);
+
+</script>
+</body>
+</html>

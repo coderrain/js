@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+ /*
+ * 通常是用for
+ * 相当于for，说白了数组给增加了个循环的方法
+ *
+ * map
+ *  对原数组里面的每一项做同样的操作
+ *  参数是一个函数
+ *  有返回值
+ *  不会改变原来的数组
+ *
+ *
+ *
+ * */
+    var arr = [1,2,3,4];
+
+/*    arr.forEach(function () {
+        console.log(arguments);
+    })
+
+    function add() {
+        console.log(arguments);
+    }
+
+    add(1,2,3)*/
+
+
+ console.log(arr.map(function (p1, p2, p3) {
+     return p1 * 2
+ }));
+ console.log(arr);
+
+
+</script>
+</body>
+</html>
