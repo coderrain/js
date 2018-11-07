@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    * 递归函数
+    *
+    *  第一点 函数自己调用自己
+    *  第二点 需要条件终止
+    *  注意：递归很容易造成死循环导致电脑或者浏览器卡死
+    *
+    * 求5以内的和
+    *
+    * 上来判断这个值是不是大于等于0
+    * 如果大于零是不是就执行加 result+num 调用自己继续循环执行
+    * 如果是小于等于0 是不是就什么不干
+    *
+    *
+    *
+    * */
+
+    var result = 0;
+
+    function add(num) {
+        if(num <= 1){
+            return 1;
+        }else{
+            return num + add(--num);
+           // return 3 +  2+ 1 + 1;
+            //add(--num);
+            //return result = result + num;
+        }
+
+        //num+add(--num)[num+ --num]
+
+
+
+    }
+
+    console.log(add(3));;
+
+
+</script>
+
+
+</body>
+</html>
