@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 基本数据类型和引用数据类型
+    *
+    * 基本数据类型 值
+    * 引用数据类型 地址
+    *
+    *
+    *
+    *
+    * */
+
+    var str = 'hello data type';
+
+    var dataType = {
+        type: 'object',
+        action: '集合'
+    }
+
+
+    function fn(num) {
+        console.log(num)
+        console.log(str)
+    }
+
+    fn(1)
+    fn(3)
+
+
+
+    var a = 1;
+    var b = a;
+    b =3;
+    console.log(a);
+
+
+    var obj = {name:'lisi'};
+    var obj1 = obj;
+    obj.name = 'zhagnsan';
+    console.log(obj)
+
+
+
+</script>
+</body>
+</html>

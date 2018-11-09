@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 作用域链
+    *
+    *
+    *
+    *  在条件不成立的时候function关键字只声明不能定义
+    *
+    * */
+    //var num = 1;
+  /*  function fn() {
+        num = 3;
+        num--;
+        console.log(num);
+    }
+
+    fn()
+
+    console.log(window.num);*/
+ /*   var ab = function () {
+
+    }
+
+  ab();
+*/
+
+/*
+ console.log(num); //undefined
+ if(false) {
+     var num = 3;
+ }
+ console.log(num); //undefined
+*/
+
+
+    console.log(fn); // undefined
+    if(true) {
+        function fn() {
+            alert(1)
+        }
+    }
+    console.log(fn) // function(){}
+
+
+
+
+</script>
+</body>
+</html>

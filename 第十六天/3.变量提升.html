@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 作用域：
+    *   全局作用域
+    *
+    *   私有作用域
+    *
+    *  带var和不带var的区别
+    *  带var 是声明了一个变量 在全局作用域下声明一个变量也相当于给window添加了一个属性
+    *  不带var 就相当于给window（全局作用域）增加了一个属性
+    *
+    *  如果在当前作用域下声明了一个变量，那么再出现这个变量赋值就跟全局没关系了吧
+    *
+    *
+    *
+    *  变量提升
+    *
+    * */
+   /* var str = 'this is scope';
+    //console.log(window.str)
+
+    function fn() {
+        //var str = '';
+        str = 'this is scopeChild';
+        console.log(str);
+    }
+
+    fn()
+
+    console.log(str);*/
+
+   /*console.log(str); // 报错 ->正确的 undefined
+   var str = 'this is str';*/
+
+  /* console.log(str);
+   if(false) {
+       var str = 'this is str';
+   }*/
+
+
+ /* var str = '123';
+  var str = '456';*/
+  /*
+  * 只要你声明了一次 以后的都不在声明只是赋值
+  *
+  * */
+   /* a();
+  function a() {
+      console.log(1);
+  }*/
+
+
+
+   var fn = 3;
+   function fn(){
+       console.log('122');
+   }
+   fn();
+
+
+
+
+
+</script>
+</body>
+</html>
