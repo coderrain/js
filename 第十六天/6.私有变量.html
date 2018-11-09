@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   /* function a(num) {
+        var f = 2;
+        console.log(num);
+    }
+    a(1)
+
+    console.log(num);*/
+   /*
+   * 函数执行完不一定销毁
+   *
+   *
+   * */
+
+/*   var x=10;
+   var y=20;
+   var z=30;
+
+
+   function fn(x,y) {
+       console.log(x,y,z);
+       var x = 100;
+       y=200;
+       z=300;
+       console.log(x,y,z)
+   }
+   fn(x,y,z)
+   console.log(x,y,z)*/
+
+
+
+   function fn(b) {
+       console.log(b);
+       function b() {
+           alert(b)
+       }
+       b();
+   }
+   fn(1);
+
+
+
+</script>
+</body>
+</html>
