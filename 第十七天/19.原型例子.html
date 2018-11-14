@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 
+    * 原型例子
+    *
+    * prototype上面的方法叫做公共方法
+    * 公有方法
+    * 私有方法
+    * 
+    * 
+    * 
+    * */
+/*    function People() {
+    }
+
+    People.prototype.eat = function () {
+        console.log('开吃');
+    }
+
+    var zhangsan = new People();
+    var lisi = new People();
+    console.log(lisi.__proto__ == People.prototype);*/
+
+
+
+
+function Tab() {
+    this.childTabButton = this.childContent = null;
+}
+
+Tab.prototype.init = function (ele) {
+    this.createEle(ele)
+}
+Tab.prototype.createEle = function () {
+    var oUl = ele.getElementsByTagName('ul')[0];
+    var aLi = oUl.getElementsByTagName('li');
+    this.childTabButton = aLi;
+    var aDiv = ele.getElementsByTagName('div');
+    this.childContent = aDiv;
+}
+
+var tab1 = new Tab();
+    console.log(tab1);
+    tab1.init(ele)
+
+
+
+
+
+</script>
+</body>
+</html>

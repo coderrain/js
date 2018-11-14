@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * hasOwnPrototype
+    *
+    * 如果都不是原型上的方法就返回true
+    *
+    * 判断这个属性在不在这个实例上  如果实例上没有返回false
+    * */
+
+    var arr = [1,2];
+    arr.index = 4;
+    Array.prototype.ddd = function () {
+        
+    }
+    /*for(var key in arr) {
+        //console.log(arr.hasOwnProperty('ddd'));
+        console.log(arr.hasOwnProperty('ff'))
+        if(arr.hasOwnProperty('ff')) {
+
+        }
+        //console.log(arr[key])
+    }*/
+    console.log(arr);
+</script>
+</body>
+</html>

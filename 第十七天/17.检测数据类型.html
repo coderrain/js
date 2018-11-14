@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *  typeof 检测
+    *
+    *  instanceof 检测实例是不是属于这个构造函数
+    *  []的构造函数Array
+    *
+    *  不能检测基本数据类型
+    *
+    * */
+    console.log(typeof null); //'object'
+    console.log(typeof []); //'object'
+
+    console.log([] instanceof Array); //true
+    console.log('abc' instanceof String); //false 为什么是false
+    console.log(null instanceof Object); //false
+</script>
+</body>
+</html>

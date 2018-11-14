@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var arr = [,,,1]; //字面量形式
+    var arr2 = new Array(5, 4); //new 构造函数
+
+    /*
+    *
+    * 构造函数
+    *   第一参数如果是数字，且有一个参数的话 是不是就设置的长度
+    *   如果有两个以上参数不管你是不是数字都会当一个元素来插入
+    * */
+
+    console.log(arr2);
+
+
+    var obj = {}; //字面量
+    var obj2 = new Object({}); //new 构造函数
+    console.log(obj2);
+
+    var str = 'abc';
+    var str2 =  new String('abc');
+
+    console.log(typeof str); //'string'
+    console.log(typeof str2);//'object'
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 函数：
+    *  定义函数
+    *    function fnName(形参) {代码块}  //没意义
+    *  执行函数
+    *   fnName(实参)
+    *
+    *   开辟一个私有作用域
+    *   给形参赋值
+    *   变量提升
+    *   代码自上而下执行
+    *
+    *   函数名字第一个字母小写把
+    *
+    *
+    * 构造函数
+    *
+    * 是不是通过new关键字去执行这个函数，new完了这个函数，这个函数就是类
+    *
+    * 通过new这个类咱们会产生一个实例，就是一个对象
+    *
+    * 构造函数模式：是不是通过new一个函数然后自己变成了一个类，通过new产生一个实例，这种模式叫做构造函数模式
+    *
+    *
+    * 构造函数里面的this都指向实例
+    *
+    * 区别 返回一个对象
+    *
+    * 首先new 创建一个对象 {} return {}
+    *
+    * */
+
+    function People() {
+        var num = 1;
+        this.name = 'zhangsan'
+        return {};
+    }
+
+    //var zhagnsan = {name:'zhagnsang'}
+
+    var zhagnsan = new People;
+    var lisi = new People();
+    console.log(zhagnsan);
+    console.log(lisi.age);
+</script>
+</body>
+</html>

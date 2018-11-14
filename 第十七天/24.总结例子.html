@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 扩展数组方法
+    *
+    * 求和
+    *
+    * 扩展字符串方法
+    *
+    * 去空格
+    *
+    *
+    *
+    * */
+
+    Array.prototype.add = function () {
+        var result = 0;
+        for(var i=0;i<this.length;i++) {
+            result += this[i]
+        }
+        return result;
+    }
+    var arr = [1,2];
+    var arr1 = [1,2,2,2,2,2]
+    console.log(arr1.add()); //3
+
+
+    var str = ' f d';
+    console.log(str.trim());
+    String.prototype.trim = function () {
+        var str = '';
+        for(var i=0;i<this.length;i++) {
+            if(this[i] != ' ') {
+                str+=this[i]
+            }
+        }
+        return str;
+    }
+
+</script>
+</body>
+</html>

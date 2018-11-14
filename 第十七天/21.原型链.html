@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 原型链和原型链查找
+    *
+    *
+    * 超找机制
+    *   先查找私有的在超找公有的
+    *
+    *  静态属性  私有属性 公有属性
+    *
+    *
+    * */
+    function Fn(name, age) {
+        var num = 1;
+        this.name = name;
+        this.age = age;
+        this.say = function(){
+            console.log('my name id ' + this.name + this.age)
+        }
+    }
+    Fn.prototype.say = function(){
+        console.log('hello')
+    }
+    Fn.prototype.eat= function(){
+        console.log('food')
+    }
+    var f1 = new Fn('aaa', 11)
+    var f2 = new Fn('bbb', 111)
+
+    console.log(f1);
+    console.log(f2);
+    f1.say()
+</script>
+</body>
+</html>

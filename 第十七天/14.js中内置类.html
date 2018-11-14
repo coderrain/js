@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+    /*
+    * js中内置类
+    *   基本数据类型
+    *      String,Number,Boolean,Null,Undefined
+    *      var str = ''; //字面量
+    *      var str1 = new String('abc') //构造函数的形式  实例
+    *
+    *
+    *   引用数据类型
+    *      Object
+    *      Function
+    *
+    *
+    *
+    *   String 类 字符串类
+    *   new String()  实例【就是一个对象】
+    *
+    *   Number 类 数字类型
+    *   new Number(11111)
+    *
+    *
+    *
+    *   HTMLDivElement htmldiv的元素类
+    *
+    * */
+    var str1 = new String('abc')
+    console.log(str1);
+    console.log(new Number(11111) == 11111);
+    console.log(new Boolean(false) == false);
+
+    var obj = {};
+    console.log(new Object() == {});
+
+    /*function fn() {
+        //代码块
+    }*/
+
+    var fn = new Function('a', 'b', 'return a+b');
+    console.log(fn);
+    console.log(fn(1,2));
+
+
+    var oApp = document.getElementById('app');
+    console.dir(oApp);
+
+    //console.dir(new HTMLDivElement)
+
+   // HTMLDivElement ->HTMLElement -> Element -> Node -> EventTarget -> Object -> null
+</script>
+
+</body>
+</html>
