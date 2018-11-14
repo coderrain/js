@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .digeo{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            border-radius: 5px;
+            border: 1px solid #c7c7c7;
+            box-shadow: 0 0 5px #999;
+            position: fixed;
+            top:50%;
+            left:50%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+        .close{
+            position: absolute;
+            right:5px;
+            top:5px;
+        }
+        .a{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn">按钮</button>
+
+<!--<div class="digeo">
+    <div class="close">x</div><div class="content"></div>
+</div>-->
+<script>
+    /*
+    * 单例模式实现
+    *
+    *
+    * */
+    var tankuang = (function () {
+        var isShow = false;
+        return {
+            init: function (ele,options) {
+                this.mainInnerHTML = options.mainInnerHTML;
+                this.eventParams = options.eventParams;
+                this.closeText = options.closeText;
+                this.classContent = options.classContent;
+                var oBtn = document.getElementById(ele);
+                this.btnClickFn(oBtn);
+
+            },
+            btnClickFn: function (oBtn) {
+                var _this = this;
+                oBtn[this.eventParams] = function () {
+                    if(!isShow){
+                        _this.createTanKg();
+                        isShow =  true;
+                    }else{
+                        document.getElementById('digeo').style.display = 'block';
+                    }
+                }
+            },
+            createTanKg: function () {
+                var oDiv = document.createElement('div');
+                oDiv.id = 'digeo';
+                oDiv.className = 'digeo ' + this.classContent;
+                var oClose = document.createElement('div');
+                oClose.className = 'close';
+                oClose.innerHTML = this.closeText || 'x';
+                oClose.onclick = function () {
+                    this.parentNode.style.display = 'none';
+                }
+                this.appendMain(oDiv);
+                oDiv.appendChild(oClose);
+                //oDiv.innerHTML = '<div class="close">x</div><div class="content"></div>';
+                this.appendContent(oDiv);
+            },
+            appendContent: function (oDiv) {
+                document.body.appendChild(oDiv);
+            },
+            appendMain: function (oDiv) {
+                oDiv.innerHTML = this.mainInnerHTML || '我是默认的内容';
+            }
+        }
+    })()
+
+    tankuang.init('btn', {
+        mainInnerHTML: '123',
+        eventParams: 'onmouseover',
+        closeText: '*',
+        classContent: 'a b'
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    body{
+        width: 300px;
+        margin:0 auto;
+    }
+    ul{
+        width: 300px;
+        border:1px solid #ccc;
+        height: 45px;
+    }
+    li{
+        float: left;
+        width: 100px;
+        line-height: 45px;
+        text-align: center;
+    }
+    #app div{
+        border: 1px solid #ccc;
+        height: 100px;
+        display: none;
+    }
+    li.active{
+        background: red;
+    }
+    #app div.active{
+        display: block;
+    }
+</style>
+<div id="app">
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div class="active">1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<script>
+    var oApp = document.getElementById('app');
+    var oUl = oApp.getElementsByTagName('ul')[0];
+    var aLi = oUl.getElementsByTagName('li');
+    var aDiv = oApp.getElementsByTagName('div');
+
+
+    for(var i=0;i<aLi.length;i++) {
+        aLi[i].onclick = (function (i) {
+            return function () {
+                for(var j=0;j<aLi.length;j++) {
+                    aLi[j].className = '';
+                    aDiv[j].className = '';
+                }
+                this.className = 'active';
+                aDiv[i].className = 'active';
+            }
+        })(i)
+    }
+
+
+
+
+    // 1.作业
+
+    // 1.为什么要用闭包？ 因为 他点击的时候for循环已经完了，变成3了，此时我们用闭包去解决
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    body{
+        width: 300px;
+        margin:0 auto;
+    }
+    ul{
+        width: 300px;
+        border:1px solid #ccc;
+        height: 45px;
+    }
+    #app li,#app2 li{
+        float: left;
+        width: 100px;
+        line-height: 45px;
+        text-align: center;
+    }
+    #app div,#app2 div{
+        border: 1px solid #ccc;
+        height: 100px;
+        display: none;
+    }
+    li.active{
+        background: red;
+    }
+    #app div.active,#app2 div.active{
+        display: block;
+    }
+</style>
+<div id="app">
+    <ul>
+        <li class="active">11</li>
+        <li>22</li>
+        <li>33</li>
+    </ul>
+    <div class="active">1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+<div id="app2">
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div class="active">1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<script>
+ /*   var oApp = document.getElementById('app');
+    var oUl = oApp.getElementsByTagName('ul')[0];
+    var aLi = oUl.getElementsByTagName('li');
+    var aDiv = oApp.getElementsByTagName('div');
+*/
+
+    /*for(var i=0;i<aLi.length;i++) {
+        aLi[i].onclick = (function (i) {
+            return function () {
+                for(var j=0;j<aLi.length;j++) {
+                    aLi[j].className = '';
+                    aDiv[j].className = '';
+                }
+                this.className = 'active';
+                aDiv[i].className = 'active';
+            }
+        })(i)
+    }*/
+    var oApp = document.getElementById('app');
+    var oApp2 = document.getElementById('app2');
+    var tab = {
+        init: function (ele) {
+            var oUl = ele.getElementsByTagName('ul')[0];
+            var aLi = oUl.getElementsByTagName('li');
+            var aDiv = ele.getElementsByTagName('div');
+            this.clickFn(aLi,aDiv);
+        },
+        clickFn: function (aLi,aDiv) {
+            var _this = this;
+            for(var i=0; i< aLi.length;i++) {
+                aLi[i].index = i;
+                aLi[i].onclick = function () {
+                    _this.clickActive(this,aLi,aDiv)
+                }
+            }
+        },
+        clickActive: function (that,aLi,aDiv) {
+            for(var i=0;i<aLi.length;i++) {
+                aLi[i].className = '';
+                aDiv[i].className = '';
+            }
+            that.className = 'active';
+            aDiv[that.index].className = 'active';
+        }
+    }
+
+    tab.init(oApp);
+    tab.init(oApp2);
+</script>
+</body>
+</html>

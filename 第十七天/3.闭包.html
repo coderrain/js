@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 闭包：函数执行会形成一个私有作用域，保护里面的变量不会受外界干扰
+    *
+    *
+    *
+    * */
+    
+    (function () {
+        var num = 1;
+        function Jquery() {
+            return num;
+        }
+        window.Jquery = Jquery;
+    })()
+
+    console.log(Jquery()); // 1
+    console.log(Jquery)
+
+
+
+    (function () {
+        var num = 1;
+        function add1() {
+            return num;
+        }
+        window.add1 = add1
+    })()
+
+
+    (function () {
+        var num = 1;
+        function add2() {
+            return num;
+        }
+        window.add2 = add2
+    })()
+
+
+   function fn() {
+       var num = 1; //2
+       return function () {
+           console.log(num++)
+       }
+   }
+
+   var f = fn();
+    f();
+    f()
+
+</script>
+</body>
+</html>
