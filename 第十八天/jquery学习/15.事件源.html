@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">btn</div>
+
+<a href="http://baidu.com">百度</a>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+/*
+* 事件源
+*
+* type 操作的事件
+* target 操作的元素
+* pageX、pageY 点击坐标距离页面左边和上边
+* offsetX，offsetY 距离自己的坐标位置
+* event.preventDefault() 阻止默认事件
+* return false 阻止默认事件
+*
+*
+* */
+
+$('a').click(function (event) {
+    var event = event || window.event;
+    console.log(event)
+
+    //return false;
+     event.preventDefault()
+})
+
+    $(document).keydown(function (e) {
+        console.log(e.which);
+
+    })
+
+</script>
+</body>
+</html>

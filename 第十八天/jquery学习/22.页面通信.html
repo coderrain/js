@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+
+    第一中方式url参数
+    第二种方式
+        cookie
+        只能存放少的数据，如果放多了不利于优化
+
+
+
+    第三种本地缓存
+        sessionStorage 关闭页面就没有了
+        localStorage 关闭页面也不会没，只要你不手动清除他永远都存在
+        可以存放多的数据
+
+
+
+-->
+
+<a href="./22.页面通信2.html?id=23">2页面</a>
+<script>
+    document.cookie = "name=1111"
+    sessionStorage.setItem('name','abc')
+    localStorage.setItem('age', 23)
+</script>
+</body>
+</html>

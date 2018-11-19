@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">btn</div>
+<div class="aa" style="width: 100px;height: 100px;
+background: red;"></div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    /*
+    * hover
+    *   第一个参数： 鼠标移上去
+    *   第二个参数： 鼠标离开
+    *
+    *
+    * */
+/*   $('#app').hover(function () {
+       $(this).css({background: "red"})
+   }, function () {
+       $(this).css({background: "yellow"})
+   })*/
+
+
+    $('#app').click(function () {
+        $('.aa').toggle('fast')
+    })
+
+
+
+</script>
+</body>
+</html>

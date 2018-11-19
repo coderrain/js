@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    /*
+    * attr 自定义属性
+    *   如果一个参数的话： 是不是就是获取
+    *   如果两个参数的话： 就是添加或者修改
+    *
+    * 删除属性
+    *   removeAttr
+    *       一个参数 被删除的属性
+    *
+    * prop 自定义属性类似于attr
+    *   区别不同版本支持不一样
+    *
+    *
+    * */
+    console.log($('#app').attr('ddd','fsdfsd'));
+
+   // $('#app').removeAttr('ddd');
+    $('#app').removeProp('ddd')
+</script>
+</body>
+</html>

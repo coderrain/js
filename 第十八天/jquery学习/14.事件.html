@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="height: 2000px;">
+<div id="app">btn</div>
+
+<input type="text">
+
+<form action="/">
+    <input type="text" value="1">
+    <input type="submit" value="按钮">
+</form>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+
+   /* $('#app').click(function () {
+        alert(1)
+    })
+    $('#app').mouseover(function () {
+        alert(1)
+    })
+    $('#app').mouseout(function () {
+        alert(1)
+    })*/
+
+   /* $('input').change(function(){
+        alert(1)
+    })*/
+   
+   /*$('#app').dblclick(function () {
+       alert(2)
+   })*/
+
+    /*$('input').input(function(){
+        alert(1)
+    })*/
+
+   /*$(window).resize(function(){
+       alert("Stop it!");
+   });*/
+
+  /* $(window).scroll(function () {
+       alert(1);
+   })*/
+
+/*  $('form').submit(function () {
+      alert(21)
+  })*/
+
+    $(document).keydown(function (event) {
+        if(event.keyCode == 13) {
+            alert('弹出回车键')
+        }
+    })
+
+</script>
+</body>
+</html>

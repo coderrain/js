@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;}
+    body{
+        margin: 0;
+        padding: 100px;
+        height: 3000px;
+    }
+
+</style>
+<div id="app">app</div>
+<div style="position: relative">
+    <p style="position: absolute;top: 20px;">Hello</p>
+    <p>2nd Paragraph</p>
+</div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    /*
+    * offset：获取位置
+    *   返回一个对象
+    *   两个参数
+    *       一个是距离左边的
+    *       一个具体上面的
+    *
+    *
+    * */
+    var oApp = $('#app');
+    console.log(oApp.offset().left);
+
+    var p = $("p:first");
+    var position = p.position();
+    console.log(position);
+
+    setTimeout(function () {
+        console.log($(document).scrollTop());
+    },2000)
+
+</script>
+</body>
+</html>

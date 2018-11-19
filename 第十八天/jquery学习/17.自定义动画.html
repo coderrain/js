@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="btn">按钮</div>
+<p style="background:red;">123</p>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $('#btn').click(function () {
+        $('p').animate({
+            height:"100px",
+            fontSize: "100px"
+        },1000).delay(1000).animate({
+            height:"10px",
+            fontSize: "10px"
+        },1000)
+    })
+</script>
+</body>
+</html>

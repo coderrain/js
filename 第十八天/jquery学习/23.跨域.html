@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    /*
+    *  同源策略
+    *
+    *  跨域：就是不在同一个域下
+    *
+    *  www.baidu.com
+    *  search.baidu.com
+    *  子域：
+    *   domain:baidu.com
+    *
+    *   jsonp处理
+    *
+    *   cors处理 设置请求头
+    *
+    *
+    *   代理
+    * */
+    //document.domain = 'baidu.com';
+
+    $.ajax({
+        url: 'http://localhost:8085/list',
+        data:{},
+        type: 'get',
+        success: function (data) {
+            document.body.innerHTML = JSON.stringify(data)
+        }
+    })
+</script>
+</body>
+</html>

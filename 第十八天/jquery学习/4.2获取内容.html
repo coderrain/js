@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"><h1>123</h1></div>
+
+<input type="checkbox" name="sex" value="1">男
+<input type="checkbox" name="sex" value="2">女
+
+
+<select name="" id="">
+    <option>发送到发牢骚</option>
+    <option value="2">22</option>
+</select>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+
+    /*
+    *
+    * 文本获取和赋值 赋值就是覆盖原来的 相当于innerHTML innerText
+    * */
+    console.log($('#app').html());
+    console.log($('#app').text());
+
+   /* var arr = [];
+    $('input').each(function () {
+        if($(this).attr('checked')) {
+           arr.push($(this).val())
+        }
+    })
+    console.log(arr)*/
+   //$('input').val(['1','2'])
+
+   /* $('select').change(function () {
+        console.log($('select').val());
+    })*/
+
+   //$('select').val('2');
+</script>
+</body>
+</html>

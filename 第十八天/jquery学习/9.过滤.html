@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>1</p>
+<p class="a">2 <a href="">111</a></p>
+<p>3</p>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    console.log($('p').eq(1));
+    console.log($('p').first().get(0));
+    console.log($('p').last().get(0));
+
+    $('p').each(function () {
+        console.log($(this).hasClass('a'));
+    })
+
+    console.log($('body').children().length);
+
+    console.log($('body').find('.a').get(0));
+</script>
+</body>
+</html>

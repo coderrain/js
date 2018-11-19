@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">btn</div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+   /*
+   * 绑定事件
+   *    相当于js的dom2二级事件
+   *
+   * */
+   var fn = function(){
+       alert( $(this).text() );
+   };
+    /*
+    $("#app").on("click", fn);
+
+    $("#app").off("click", fn);*/
+
+   $("#app").one("click", fn);
+
+   $(function () {
+       $('#app').trigger('click')
+   })
+
+
+</script>
+</body>
+</html>

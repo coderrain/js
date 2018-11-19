@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>11</p>
+<p>22</p>
+<p>33</p>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $('p').each(function (index, item) {
+        $(item).click(function() {
+            $(this).addClass('active').siblings('p').removeClass('active');
+            $('div').eq($(this).index()).addClass('active').siblings('div').removeClass('active');
+        })
+
+        /*
+        * 1.坐标
+        * 2.元素
+        * */
+        //console.log(arguments)
+        /*console.dir(index)
+        console.log(item)*/
+    })
+</script>
+</body>
+</html>

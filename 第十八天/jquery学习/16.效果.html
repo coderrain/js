@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="btn">按钮</div>
+<p>123</p>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    var isShow = false;
+    $('#btn').click(function () {
+     /*   if(!isShow) {
+            $('p').fadeIn();
+            isShow = true;
+        }else{
+            $('p').fadeOut('slow');
+            isShow = false;
+        }*/
+        $('p').fadeToggle()
+    })
+</script>
+</body>
+</html>
