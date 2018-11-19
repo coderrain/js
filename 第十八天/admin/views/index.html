@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+ 首页里有个login字段 代表的是用户名
+
+-->
+<!--swig模板文档-->
+首页
+{% if login %}
+    {{ login }}
+{% else %}
+    <a href="/login">登录</a>
+    <a href="/reg">注册</a>
+{% endif %}
+</body>
+</html>
