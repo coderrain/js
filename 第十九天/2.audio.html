@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    #play{
+        background: url("12.png") no-repeat;
+        width: 100px;
+        height:100px;
+        border: 1px solid #ccc;
+        background-size: 100%;
+    }
+</style>
+<audio style="display: none;" id="audio" src="http://www.w3school.com.cn/i/song.ogg" controls="controls"></audio>
+<button id="play">
+
+</button>
+<script>
+    var oAudio = document.getElementById('audio');
+    var oPlay = document.getElementById('play');
+
+    oPlay.onclick = function () {
+        if(oAudio.paused) {
+            oAudio.play()
+        }else{
+            oAudio.pause()
+        }
+
+    }
+</script>
+</body>
+</html>
