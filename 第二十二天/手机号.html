@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<script>
+    document.getElementById('input').onchange = function () {
+        var reg = /^\d{11}$/;
+        var val = this.value;
+        console.log(reg.test(val));
+    }
+
+
+    /*
+    *
+    * ^12345678901$1
+    *
+    * 开始 必须11位 结束
+    *
+    * */
+
+</script>
+</body>
+</html>

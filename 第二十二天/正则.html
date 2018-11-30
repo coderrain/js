@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 正则就是一个工具（验证字符串的工具）
+    *
+    *
+    * 修饰符
+    *   g global全局
+    *   i 不区分大小写
+    *   m 多行匹配 先不说一会再说
+    *
+    * 元字符
+    *   有意义的字符
+    *   \d 代表数字0~9
+    *   \D 与\d相反
+    *   \s 空格
+    *   \b 区间
+    *   \w  包含大小写字母，数字，_
+    *   x|y x或者y
+    *   []或者的集合
+    *   ^a  以a开头的
+    *   b$ 以b结尾的
+    *   . 除了换行符(\r\n)意外的都是true
+    *
+    *  量词
+    *   a* 符合里面没有a，有多个a都符合  零到多个
+    *   a+ 一个到多个
+    *   a？ 零个或者一个
+    *   {}
+    *
+    *
+    * test 验证规则如果符合返回true不符合返回false
+    * replace
+    * */
+
+   // var reg = /1/g;
+    //console.log(reg.test('1231'));
+   // console.log('1231'.replace(reg, '*'));;
+
+
+    /*var reg = /a/i;
+    console.log(reg.test('Abc'));*/
+
+   /* var reg = /\s/;
+    console.log(reg.test('9dfd s'));*/
+
+   /*var reg = /\b/g;
+    console.log('abc def'.replace(reg, '*'));*/
+
+/*
+   var reg = /\w/;
+    console.log(reg.test('a'));
+    console.log(reg.test('A'));
+    console.log(reg.test('1'));
+    console.log(reg.test('_'));
+    console.log(reg.test('$'));
+    console.log(reg.test('-'));
+*/
+
+/*
+var reg = /[a-zA-Z\d]/;
+    console.log(reg.test('a'));
+    console.log(reg.test('A'));
+    console.log(reg.test('v'));
+    console.log(reg.test('d'));
+    console.log(reg.test('z'));
+*/
+
+/*var reg = /b$/;
+console.log(reg.test('abc'));
+console.log(reg.test('bca'));
+console.log(reg.test('bcd'));
+console.log(reg.test('acb'));*/
+
+/*var reg = /./;
+    console.log(reg.test('a'));
+    console.log(reg.test('A'));
+    console.log(reg.test('1'));
+    console.log(reg.test('$'));
+    console.log(reg.test('_'));
+    console.log(reg.test('-'));
+    console.log(reg.test('你'));
+    console.log(reg.test('\r\n'));*/
+
+
+/*var reg = /a*!/;
+    console.log(reg.test('a')); //1
+    console.log(reg.test('ab')); //1
+    console.log(reg.test('abc')); //1
+    console.log(reg.test('bc')); //0
+    console.log(reg.test('aaaabc')); //4*/
+
+/*var reg = /\+1?/;
+console.log(reg.test('++123'));
+console.log(reg.test('+11111'));*/
+
+/*var reg = /\d{2,3}/
+console.log(reg.test('1a2'));
+console.log(reg.test('1d2d1'));
+console.log(reg.test('12d2d2'));*/
+
+
+</script>
+</body>
+</html>

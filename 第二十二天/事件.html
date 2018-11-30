@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div id="child">按钮</div>
+    </div>
+<script>
+    var oApp = document.getElementById('app');
+    /*
+    * dom1级绑定事件
+    *
+    * */
+    /*console.dir(oApp);
+    oApp.onclick = function () {
+        alert(1);
+    }
+
+    oApp.onclick = function () {
+        alert(2);
+    }*/
+    /*
+    * dom2级
+    * 绑定多个click事件
+    * */
+
+   /* oApp.addEventListener('click', function () {
+        alert(1)
+    }, false)
+    oApp.addEventListener('click', function () {
+        alert(2)
+    }, false)*/
+
+    /*oApp.attachEvent('onclick', function () {
+        alert(1)
+    })
+    oApp.attachEvent('onclick', function () {
+        alert(2)
+    })*/
+
+    /*oApp.onclick = function (ev) {
+        ev = ev || window.event
+        console.log(ev);
+        console.log(ev.type);
+        console.log(ev.target);
+    }*/
+
+
+    /*
+    * 事件冒泡和捕获
+    *
+    *
+    * */
+
+    /*document.body.onclick = function () {
+        alert('body')
+    }
+    oApp.onclick = function (e) {
+        alert('oapp');
+        e.cancelBubble = true;
+        e.stopPropagation();
+    }*/
+
+
+ /*   oApp.addEventListener('click', function (e) {
+        alert(1)
+        e.cancelBubble = true;
+        e.stopPropagation();
+    }, true)
+
+    document.body.onclick = function () {
+        alert('body')
+    }
+
+    child.onclick = function () {
+        alert('child')
+    }*/
+
+    // 1 child body
+
+
+</script>
+</body>
+</html>

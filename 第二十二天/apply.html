@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(a, b) {
+        console.log(a); //undefiend
+        console.log(this);
+        return a+b
+    }
+
+    /*
+    * apply
+    *  改变this
+    *  执行函数
+    *
+    *  第一个参数是不是修改后逇this
+    *  第二个参数是函数实参的集合
+    *
+    *
+    *  call,apply区别
+    * */
+
+    //add.call({name:1},2,3)
+    console.log(add.apply({name: 1}, [2, 3]));
+</script>
+</body>
+</html>

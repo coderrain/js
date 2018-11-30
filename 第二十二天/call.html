@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(a, b) {
+        console.log(a); //undefiend
+        console.log(this);
+        return a+b
+    }
+
+   // add(); //window
+
+    /*
+    * call是做什么的？
+    *   修改里面的this
+    *   执行函数
+    *
+    *  第一参数是改变后的this
+    *  第二参数 是函数的第一个实参
+    *  第三个参数 是函数的第二个
+    *  ....
+    *  ....
+    *  ....
+    *
+    * */
+
+    console.log( add.call({name: 1},2,3));
+
+
+    console.dir(add);
+
+
+</script>
+</body>
+</html>
