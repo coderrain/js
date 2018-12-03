@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .bg{
+        width:100px;
+        height:100px;
+        background: red;
+    }
+    .color{
+        font-size: 100px;
+    }
+</style>
+<div id="app">
+    <div v-bind:class="[abc,bcd]">fsfdsfds</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        /*data: {
+            abc: false,
+            isColor:true
+        }*/
+        /*data: {
+            classObj: {
+                bg: true,
+                color: false
+            }
+        }*/
+        data: {
+            abc: 'aaaaa',
+            bcd: 'bbbb'
+        }
+    })
+</script>
+</body>
+</html>

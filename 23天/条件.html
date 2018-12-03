@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div v-if="isShow">show</div>
+    <div v-else>false</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    /*
+    * 我想当isShow变量为true的时候显示
+    * */
+    /*var isShow = false;
+    if(isShow) {
+        a.style.display = 'block';
+    }else{
+        a.style.display = 'none';
+    }*/
+
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            isShow: false
+        }
+    })
+</script>
+</body>
+</html>

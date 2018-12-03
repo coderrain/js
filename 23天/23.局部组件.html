@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <item-todo></item-todo>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+   /* Vue.component('item-todo', {
+        template: '<div>你好啊</div>'
+    })*/
+    var itemTodo = {
+        template: '<div>你好啊</div>'
+    }
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+        },
+        components: {
+            'item-todo': itemTodo
+        }
+    })
+</script>
+</body>
+</html>

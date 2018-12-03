@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <todo-item v-bind:todo="todo" v-for="todo in todos"></todo-item>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    /*
+    * 组件：实现某个功能
+    *
+    * 定义一个组件
+    *
+    * 怎么定义一个组件？
+    *   第一步调用类上的一个component，
+    *       1： 组件名
+    *       2： 组件的参数集合
+    *           template 就是要渲染的东西
+    *
+    *
+    *   父组件像子组件传值
+    *       1. 绑定父组件的数据
+    *       2.props接收
+    *       3.引用
+    *
+    * */
+
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            todos: [
+                { text: '学习 JavaScript' },
+                { text: '学习 Vue' },
+                { text: '整个牛项目' }
+            ]
+        }
+    })
+</script>
+</body>
+</html>

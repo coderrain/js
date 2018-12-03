@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div @click="alertMsg(1,$event)">按钮</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            isShow: false
+        },
+        methods:{
+            alertMsg: function (index, event) {
+                //如果不传参数默认是事件对象
+                console.log(event)
+                console.log(arguments)
+            }
+        }
+    })
+</script>
+</body>
+</html>

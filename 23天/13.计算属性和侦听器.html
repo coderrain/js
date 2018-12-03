@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{ msg }}
+    {{ reverseMsg }}
+    {{ result }}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+/*
+* 方法  计算属性  侦听器
+*
+* 方法里面执行很多次（执行多次）
+* 计算属性给缓存起来了（延迟（异步）改变不可以）
+* 侦听器可以执行异步
+*
+*
+* 侦听器 vs 计算属性
+*
+* 侦听器是不是侦听多个属性（代码量很多）
+* 计算属性不需要
+*
+*
+*
+*
+* */
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '<h1>Hello Vue!</h1>',
+            reverseMsg: '',
+            num1: 0,
+            num2: 1,
+            //result: 0
+        },
+       /* methods:{
+            reverseMsg: function () {
+                return this.msg.split('').reverse().join('')
+            }
+        },*/
+        computed: {
+            /*reverseMsg: function () {
+                var _this = this;
+                return _this.msg.split('').reverse().join('')
+            }*/
+            result: function () {
+                return this.num1 +this.num2;
+            }
+        },
+        watch: {
+            msg: function (newVal, oldVal) {
+                var _this = this;
+                setTimeout(function () {
+                    _this.reverseMsg = newVal.split('').reverse().join('')
+                },1000)
+            }/*,
+            num1: function (newVal) {
+                this.result = newVal + this.num2;
+            },
+            num2: function (newVal) {
+                this.result = newVal + this.num1;
+            }*/
+        }
+    })
+</script>
+</body>
+</html>

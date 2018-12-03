@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="example-1">
+    <li v-for="item in items">  {{ item.message }} </li>
+    <li v-for="(item,index) in 10">{{ item }} {{ index }}</li>
+    <li v-for="(item,index) in 'abcde'">{{ item }} {{ index }}</li>
+    <li v-for="(item,key,index) in obj">{{ item }} {{ key }} {{index}}</li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            items: [
+                { message: 'Foo' },
+                { message: 'Bar' }
+            ],
+            obj: {
+                name: 'rain',
+                age: 27
+            }
+        }
+    })
+</script>
+</body>
+</html>

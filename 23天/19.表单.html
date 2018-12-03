@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="message">
+
+    <input type="checkbox" v-model="checkVal" name="hobby" value="1">跑步
+    <input type="checkbox" v-model="checkVal" name="hobby" value="2">唱歌 {{ checkVal }}
+
+    <input type="radio" name="sex" value="1" v-model="sex">男
+    <input type="radio" name="sex" value="2" v-model="sex">女 {{ sex}}
+
+    <select name="" id="" v-model="year" multiple>
+        <option value="1">一年</option>
+        <option value="2">两年</option>
+    </select>
+    {{ year }}
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            checkVal: [],
+            sex: 0,
+            year: []
+        }
+    })
+</script>
+</body>
+</html>

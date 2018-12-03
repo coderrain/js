@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <!--<template v-if="a == 0">
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+        </template>
+        <div v-else-if="a == 1">11</div>
+        <div v-else>else</div>-->
+
+        <div v-show="a">fdf</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /*
+        *  v-if v-show的区别
+        *  if的时候不成立就不渲染  show是不是渲染但隐藏起来了
+        * */
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: false
+            }
+        })
+    </script>
+</body>
+</ht
+</body>
+</html>

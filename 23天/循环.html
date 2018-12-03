@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--<ul id="oUl">
+    </ul>-->
+    <ul>
+        <li v-for="item in todos">{{ item.text }}</li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    /*
+    * 第一步获取元素
+    * 第二步
+    * 第三步添加东西
+    *
+    * */
+
+
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            todos: [
+                { text: '学习 JavaScript' },
+                { text: '学习 Vue' },
+                { text: '整个牛项目' }
+            ]
+        }
+    })
+</script>
+</body>
+</html>

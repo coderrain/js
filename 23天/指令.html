@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ message }}
+<div id="app">
+    {{ message }}
+    <a href="" v-bind:title="title">我是a标签</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    console.log(Vue)
+    /*
+     * 声明式渲染   {{ message }}
+     * （数据）响应式
+     * 引发了一个问题：
+     *   为什么不是data上的 这有个数据劫持
+     *  指令：
+     *      v-bind:
+     *      指定v-开头的都是指令
+     *      动态绑定数据
+     *
+     *
+     * */
+
+    var vm = new Vue({
+        el: '#app', // 就是vue作用的地盘 不能用body和html
+        data: {
+            message: 'Hello Vue!',
+            title: '我是title'
+        }
+    })
+</script>
+</body>
+</html>

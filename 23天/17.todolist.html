@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    add a todo <input type="text" v-model="inputVal"> <button @click="add">add</button>
+    <ul>
+        <li v-for="item,index in arr">{{ item }} <button @click="del(index)">remove</button></li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            arr: [],
+            inputVal: ''
+        },
+        methods: {
+            add: function () {
+                this.arr.push(this.inputVal);
+                this.inputVal = ''
+            },
+            del: function (index) {
+                this.arr.splice(index, 1)
+            }
+        }
+    })
+</script>
+</body>
+</html>

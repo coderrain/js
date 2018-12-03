@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <todo>
+
+    </todo>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    Vue.component('todo', {
+        template: `<div>
+                <slot name="header">我是头</slot>
+                <slot>我是主体的</slot>
+                <slot name="footer">我是尾部</slot>
+        </div>`
+    })
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+        }
+    })
+</script>
+</body>
+</html>

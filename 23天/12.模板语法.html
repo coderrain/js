@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span v-once>这个将不会改变: <span v-text="    msg"></span></span>
+    <div :title="msg">放声大哭莲富大厦荆防颗粒的数据</div>
+    <a href="http://baidu.com" @click.prevent="clk">百度</a>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '<h1>Hello Vue!</h1>',
+        },
+        methods:{
+            clk: function () {
+                alert(1)
+            }
+        }
+    })
+</script>
+</body>
+</html>

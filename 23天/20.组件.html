@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <item-count v-bind:count="count" v-on:add="add"></item-count>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    /*
+    * 但是组件里面没有el这个选项，除了跟组件才有他
+    * 子组件data必须是个函数
+    *
+    * 全局组件和局部组件
+    *
+    * 通过在Vue上定义组件的方式叫做全局
+    *
+    * 子组件向父组件传递
+    * */
+    Vue.component('item-count', {
+        props: ['count'],
+        template: '<button @click="addBtn">you clicked {{ count }}</button>',
+        methods: {
+            addBtn: function () {
+                this.$emit('add',10)
+            }
+        }
+    })
+
+
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            count: 0
+        },
+        methods: {
+            add: function (num) {
+                this.count += num;
+            }
+        }
+    })
+</script>
+</body>
+</html>

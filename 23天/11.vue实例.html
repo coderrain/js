@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{ msg }}
+    <button v-on:click="changeMsg">按钮</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    /*
+    *  1.new Vue
+    *  2.初始化事件和生命周期的数据
+    *  3.-1  beforeCreate
+    *  3.初始化数据响应式和注入
+    *  3.1  created
+    *
+    * */
+    var vm = new Vue({
+       // el:'#app',
+        data: {
+            msg: 'hello'
+        },
+        beforeCreate: function () {
+            console.log(this.msg) //没有数据劫持注入
+        },
+        created: function () {
+            console.log(this.msg) //做完了数据劫持等工作
+        },
+        beforeMount: function () {
+            console.log(this.$el)
+        },
+        mounted: function () {
+            console.log(this.$el)
+        },
+        beforeUpdate: function () {
+            alert(1);
+        },
+        updated: function () {
+            alert(2)
+        },
+       beforeDestroy: function () {
+           alert('关闭页面之前做某事')
+       },
+        destroyed: function () {
+            alert('没有用')
+        },
+       // template: '<div>111</div>',
+        methods: {
+            changeMsg: function () {
+                this.msg = 'hellllllllll'
+            }
+        }
+    })
+
+    vm.$mount('#app')
+</script>
+</body>
+</html>
